@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>MR.TUFER — Home</title>
+<meta name="description" content="Official website of MR.TUFER — Yashitha Sheran Dayarathna, content creator. Follow for vlogs, travel, food challenges and more." />
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+
+<style>
+    :root{
+        --bg1: #0f0c29;
+        --bg2: #302b63;
+        --bg3: #24243e;
+        --bg4: #1a1a2e;
+    }
+
+    *{box-sizing:border-box;}
+    html, body {
+        margin: 0;
+        padding: 0;
+        font-family: 'Poppins', Arial, sans-serif;
+        height: 100%;
+        width: 100%;
+        color: white;
+        background: linear-gradient(270deg, var(--bg1), var(--bg2), var(--bg3), var(--bg4));
+        background-size: 800% 800%;
+        animation: gradientBG 20s ease infinite;
+        text-align: center;
+        padding: 20px;
+        overflow-x: hidden;
+    }
+
+    @keyframes gradientBG { 0%{background-position:0% 50%} 50%{background-position:100% 50%} 100%{background-position:0% 50%} }
+
+    .zoom-wrapper {
+        width: 100%;
+        min-height: 100vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 14px;
+    }
+
+    .profile-img-container {
+        position: relative;
+        width: 220px; height: 220px;
+        border-radius: 50%;
+        background: linear-gradient(45deg,#ff0080,#7928ca,#00f0ff,#ffcc00);
+        background-size:400% 400%;
+        animation: gradientRotate 10s ease infinite;
+        display:flex; align-items:center; justify-content:center;
+        box-shadow:0 0 40px rgba(255,255,255,0.06);
+        transition: transform .45s ease, box-shadow .45s ease;
+        z-index: 5;
+    }
+
+    .profile-img-container:hover{ transform: scale(1.06); box-shadow:0 0 60px #ff00ff; }
+    .profile-img-container img{ width:200px;height:200px;border-radius:50%;border:4px solid white;object-fit:cover; }
+
+    @keyframes gradientRotate { 0%{background-position:0% 50%} 50%{background-position:100% 50%} 100%{background-position:0% 50%} }
+
+    h1 {
+        font-size: 3rem; margin: 6px 0; color: #ffe600;
+        text-shadow:0 0 5px #ff00ff,0 0 10px #ff00ff,0 0 20px #ff00ff; 
+        animation: neonGlow 1.6s ease-in-out infinite alternate;
+        z-index:6;
+    }
+    @keyframes neonGlow { 0%{text-shadow:0 0 5px #ff00ff} 50%{text-shadow:0 0 20px #ff00ff} 100%{text-shadow:0 0 5px #ff00ff} }
+
+    .bio-text { max-width:700px; font-size:1.1rem; margin:14px auto; line-height:1.6; font-weight:500; color:#e8e8e8; padding:0 15px; z-index:6; }
+
+    .bio-box{
+        display:flex;
+        align-items:flex-start;
+        gap:14px;
+        max-width:840px;
+        margin:14px auto;
+        padding:16px 18px;
+        border-radius:16px;
+        background: linear-gradient(180deg, rgba(255,255,255,0.03), rgba(255,255,255,0.01));
+        border: 1px solid rgba(255,255,255,0.06);
+        box-shadow: 0 6px 30px rgba(10,8,20,0.6), inset 0 1px 0 rgba(255,255,255,0.02);
+        backdrop-filter: blur(8px) saturate(120%);
+        color: #f1f1f1;
+        text-align:left;
+        transition: transform .28s ease, box-shadow .28s ease;
+        z-index:6;
+        flex-wrap: wrap;
+    }
+
+    .bio-box:hover{
+        transform: translateY(-6px);
+        box-shadow: 0 12px 40px rgba(255,0,255,0.12), 0 8px 30px rgba(10,8,20,0.7);
+    }
+
+    .bio-icon{
+        flex: 0 0 56px;
+        height:56px;
+        display:flex;
+        align-items:center;
+        justify-content:center;
+        font-size:28px;
+        border-radius:12px;
+        background: linear-gradient(135deg, rgba(255,0,255,0.14), rgba(0,240,255,0.08));
+        box-shadow: 0 6px 18px rgba(255,0,255,0.06), inset 0 -6px 18px rgba(0,0,0,0.12);
+    }
+
+    .bio-content p{
+        margin:0;
+        font-size:1rem;
+        line-height:1.55;
+        color: #eaeaea;
+        font-weight:500;
+    }
+
+    .bio-content p strong{
+        color: #ffea00;
+        text-shadow: 0 0 6px rgba(255,0,255,0.08);
+    }
+
+    .button-group { display:flex; flex-wrap:wrap; gap:16px; justify-content:center; margin-top:18px; z-index:6; }
+    .action-button {
+        padding:12px 30px; font-size:1rem; font-weight:700; text-transform:uppercase;
+        color:#fff; border:none; border-radius:35px; cursor:pointer;
+        background: linear-gradient(45deg,#ff00ff,#ff0066,#00f0ff,#ffcc00);
+        background-size:300% 300%; box-shadow:0 0 12px rgba(255,0,255,0.45);
+        transition:.35s ease, background-position .35s ease;
+        text-decoration: none; display:inline-flex; align-items:center; justify-content:center;
+    }
+    .action-button:hover { transform: translateY(-3px) scale(1.03); background-position:100% 50%; box-shadow:0 0 30px #ff00ff; }
+
+    footer {
+        margin-top: 60px;
+        font-size: 0.9rem;
+        color: rgba(255,255,255,0.65);
+        z-index:6;
+    }
+
+    /* ===== Responsive ===== */
+    @media (max-width:1200px){
+        h1{font-size:2.5rem;}
+        .profile-img-container{width:180px;height:180px;}
+        .profile-img-container img{width:160px;height:160px;}
+    }
+    @media (max-width:768px){
+        h1{font-size:2.1rem;}
+        .profile-img-container{width:160px;height:160px;}
+        .profile-img-container img{width:140px;height:140px;}
+        .action-button{padding:10px 22px; font-size:.9rem;}
+    }
+    @media (max-width:480px){
+        h1{font-size:1.8rem;}
+        .profile-img-container{width:140px;height:140px;}
+        .profile-img-container img{width:120px;height:120px;}
+        .action-button{padding:8px 18px; font-size:.85rem;}
+        .bio-box{flex-direction:column; align-items:flex-start; padding:12px;}
+        .bio-icon{margin-bottom:6px;}
+    }
+</style>
+</head>
+<body>
+
+<div class="zoom-wrapper">
+    <div class="profile-img-container" aria-hidden="false">
+        <img src="images/new pic 014.jpg" alt="Portrait of MR.TUFER (Yashitha Sheran Dayarathna)" loading="lazy">
+    </div>
+
+    <h1>MR.TUFER</h1>
+
+    <p class="bio-text"><b>* I'm Yashitha Sheran Dayarathna, a Content Creator with over 5K+ total followers on YouTube, Instagram, TikTok, and Facebook.</b></p>
+
+    <div class="bio-box" role="region" aria-label="About MR.TUFER">
+      <div class="bio-icon" aria-hidden="true">🎬</div>
+      <div class="bio-content">
+        <p><strong>MR.TUFER</strong> is a versatile content creator and social media personality, active on YouTube, Facebook, and TikTok. On YouTube, he streams live sports, posts meme reviews, travel vlogs, daily life content, and exciting food challenges. On Facebook and TikTok, he shares short, entertaining clips that engage his audience and keep them coming back for more. With a lively and approachable style, MR.TUFER has built a growing community of followers across all platforms who enjoy his humor, adventures, and interactive content.</p>
+      </div>
+    </div>
+
+    <div class="button-group">
+        <a href="hi.html" class="action-button">YSD STORE</a>
+        <a href="about_detelss.html" class="action-button">ABOUT</a>
+    </div>
+
+    <footer>© MR.TUFER — Yashitha Sheran Dayarathna</footer>
+</div>
+
+<script>
+const profile = document.querySelector('.profile-img-container');
+if(profile){
+  document.addEventListener('mousemove', (e)=>{
+    const x = (e.clientX - window.innerWidth/2) / (window.innerWidth/6);
+    const y = (e.clientY - window.innerHeight/2) / (window.innerHeight/8);
+    profile.style.transform = `translate3d(${x}px,${y}px,0) scale(1.02)`;
+  });
+  document.addEventListener('mouseleave', ()=> profile.style.transform = 'scale(1) translate3d(0,0,0)');
+}
+</script>
+
+</body>
+</html>
